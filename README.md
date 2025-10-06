@@ -133,7 +133,7 @@ pip install -r requirements.txt
 ```
 
 ### 5.2 Make predictions using pre-trained model
-- Use the `./FiltNet_prediction/Prediction.ipynb` notebook to predict filter media properties from SEM images.
+- Use the `./FiltNet_prediction/Prediction.ipynb` notebook to predict filter media properties from SEM images or Artificial SEM iamges from 3D geoemtries  .
 - The pre-trained model `Model40FineTune_10066d.h5` is provided for immediate use.
 - Example images are available in `./FiltNet_prediction/Imgs/` directory.
 
@@ -143,7 +143,7 @@ pip install -r requirements.txt
 - Adjust hyperparameters and architecture in `FiltNet_CNNs.py` as needed.
 
 ### 5.4 Generate training data
-- Use the scripts in `./GTD_generation/` to generate synthetic training data from filter geometry parameters.
+- Use the macro scripts in `./GTD_generation/` with GeoDict software to generate synthetic training data from filter geometry parameters.
 
 
 ## 6.Citation
@@ -157,4 +157,4 @@ If you find this repo useful, please cite our paper.
 
 ## 7.Contact
 If you have any questions or suggestions, feel free to contact:
-- [Contact information to be added]
+- zpan@umn.edu
