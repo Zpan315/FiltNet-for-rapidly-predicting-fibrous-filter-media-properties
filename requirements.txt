@@ -1,0 +1,8 @@
+tensorflow-gpu==2.6.2
+pandas
+Pillow
+matplotlib
+opencv-python
+numpy>=1.19.4,<2.0
+h5py==3.1.0
+scikit-learn

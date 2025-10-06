@@ -1,0 +1,18 @@
+Filter thickness (m) 
+Mean fiber size (m)
+Fiber size SD (m)
+Porosity
+Open porosity
+Bubble point (Pa)
+Tortuosity
+Pore size D10 (m)
+Pore size D50 (m)
+Pore size D90 (m)
+Orientation tensor x
+Orientation tensor y
+Orientation tensor z
+Absolute Permeabiltiy (m^2)
+Solidity distribution (in-plane)
+Solidity distribution (through-plane)
+Pore size distribution
+Initial filtration efficiency at 10.5 cm/s

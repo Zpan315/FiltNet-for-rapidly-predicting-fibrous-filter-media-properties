@@ -1,0 +1,12 @@
+1. "imgData_prep_3" to "imgData_pre_3"
+
+2. Delete save_to_csv
+
+3. Delete now()
+
+4. def gener(batch_size,Data,List,MIN,MAX) >>> def gener(batch_size,Data,List,MIN,MAX,X2_MIN,X2_MAX):
+
+5. Delete normalize(a)
+
+
+
