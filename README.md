@@ -11,7 +11,6 @@ FiltNet-for-rapidly-predicting-fibrous-filter-media-properties
 │  ├─ ImgDisplay.ipynb
 │  ├─ Prediction.ipynb
 │  ├─ RandomShowCase.ipynb
-│  ├─ Model40FineTune_10066d.h5
 │  ├─ Imgs
 │  │  ├─ CurvedFiber
 │  │  │  ├─ Matched_x_y.png
@@ -63,6 +62,7 @@ FiltNet-for-rapidly-predicting-fibrous-filter-media-properties
 │  │  ├─ list_40_1000d.h5
 │  │  └─ list_40_10066d.h5
 │  └─ Trained
+│     └─ Model40FineTune_10066d.h5
 ├─ LICENSE
 ├─ README.md
 ├─ requirements.txt
