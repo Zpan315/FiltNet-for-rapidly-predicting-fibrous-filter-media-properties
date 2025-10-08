@@ -634,9 +634,10 @@ def predict(model,A,B,ModelType=40):
 
 #================================================================================================#
 #Prettify and Print Results
-def prettyresult(vals,PixelSize,file_name,units='um',verbose=1):
-    vals=np.squeeze(vals)
-    res = PixelSize 
+def prettyresult(vals, pixel_size, file_name, units='um', verbose=1):
+    vals = np.squeeze(vals)
+    unit_transfer = 1e-6
+    res = pixel_size / unit_transfer
 
     if not os.path.exists(os.path.dirname(file_name)):
         os.makedirs(os.path.dirname(file_name))
@@ -644,16 +645,11 @@ def prettyresult(vals,PixelSize,file_name,units='um',verbose=1):
     with open(VarName_path) as f:
         var_names = [line.strip() for line in f]
 
-    s_values = vals[0:14]
+    s_values = vals[:14]
     thickness = vals[0]
 
-    # Create output directory if it doesn't exist
-    output_dir = os.path.dirname(file_name)
-    if output_dir and not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-
     with open(file_name, 'w') as f:
-        f.write("FiltNet output results including 14 single-value\nparamters, 4 distributions\n")
+        f.write("DeeFilter output results including 14 single-value\nparamters, 4 distributions\n")
         f.write('_' * 50 + '\n')
         f.write('        ### Single-value parameters ###\n')
         f.write('_' * 50 + '\n\n')
@@ -663,7 +659,6 @@ def prettyresult(vals,PixelSize,file_name,units='um',verbose=1):
         for i, val in enumerate(s_values):
             name = var_names[i].replace('(m)', f'({units})') if units == 'um' else var_names[i]
             display_val = np.round(val,3)
-
             # Compute and write Closed Porosity
             if i == 5:
                 closed_porosity = np.round(s_values[i - 2] - s_values[i - 1], 3)
@@ -685,6 +680,7 @@ def prettyresult(vals,PixelSize,file_name,units='um',verbose=1):
         f.write('       ### Distributions ###\n')
         f.write('_' * 50 + '\n')
 
+        d = [14, 50, 25, 200, 19]
         for I in range(4):
             multiplier=1
             label = var_names[I + 14].strip()
@@ -697,20 +693,23 @@ def prettyresult(vals,PixelSize,file_name,units='um',verbose=1):
             f.write('-' * 50 + '\n')
             f.write(f'{xlabel:<25}{ylabel}\n')
             f.write('-' * 50 + '\n')
-                
-            shift=np.sum(data_indices[0:I+1])
 
-            for J in range(data_indices[I+1]):
+            shift=np.sum(d[0:I+1])
+            
+            for J in range(d[I+1]):
                 if I == 0:
-                    multiplier=400 / 50 * res
+                    multiplier=400 / 50 * res * 256 / 400
                 if I == 1:
-                    multiplier=thickness / 25 * res
+                    multiplier=thickness / 25
                 if I == 2:
-                    multiplier=100 * 2 * res
-                t=str(np.round((J*.01+.01)*multiplier,2))
-                if J > 9 and I == 3:
-                    multiplier=10
-                    t=str(np.round(((J-10)*.01+.02)*multiplier,2))
+                    multiplier=2 * res * 256 / 400
+                t=str(np.round((J+1)*multiplier,5))
+                if I == 3:
+                    if J > 9:
+                        multiplier=10
+                        t=str(np.round(((J-10)*.01+.02)*multiplier,2))
+                    else:
+                        t=str(np.round((J*0.01+0.01)*multiplier,2))
                 spa=' ' * (40-len(t))
                 f.write(t+spa+str(np.round(vals[J+shift],3))+'\n')
         f.close()
