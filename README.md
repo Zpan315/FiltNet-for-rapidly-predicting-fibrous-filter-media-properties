@@ -89,7 +89,7 @@ FiltNet-for-rapidly-predicting-fibrous-filter-media-properties
 1. **Prediction.ipynb**: Main notebook for predicting fibrous filter media properties using trained FiltNet models.
 2. **ImgDisplay.ipynb**: Notebook for displaying and visualizing images from the training dataset (FiltNet_1000d.h5).
 3. **RandomShowCase.ipynb**: Notebook for showcasing random prediction examples with detailed visualizations.
-4. **Model40FineTune_10066d.h5**: Pre-trained FiltNet model for prediction. Use this link to download: [model](https://1drv.ms/u/c/4790a4376137575d/EagLVo9ZYipKvPk3hqT0VCAB-XRfgUbIrv4lCOF6qdY01g?e=0qXpDF)
+4. **Model40FineTune_10066d.h5**: Pre-trained FiltNet model for prediction. Use this link to download: [model](https://1drv.ms/u/c/4790a4376137575d/EQPth4OhBPJIrP8gm0E0w5IBBEhI2oJ0e7koLiEodgBa0A?e=ntUQbR)
 5. **Imgs/**: Contains example images of different fiber types and filter media:
    - **CurvedFiber/Artificial_SEM/**: Artificial SEM images with matched projections in x-y, x-z, and y-z planes
    - **EllipticalFiber/Artificial_SEM/**: Artificial SEM images with matched projections in x-y, x-z, and y-z planes
