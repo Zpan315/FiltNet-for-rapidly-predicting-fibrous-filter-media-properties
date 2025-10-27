@@ -13,13 +13,15 @@ FiltNet-for-rapidly-predicting-fibrous-filter-media-properties
 │  ├─ RandomShowCase.ipynb
 │  ├─ Imgs
 │  │  ├─ CurvedFiber
-│  │  │  ├─ Matched_x_y.png
-│  │  │  ├─ Matched_x_z.png
-│  │  │  └─ Matched_y_z.png
+│  │  │  └─ Artificial_SEM
+│  │  │     ├─ Matched_x_y.png
+│  │  │     ├─ Matched_x_z.png
+│  │  │     └─ Matched_y_z.png
 │  │  ├─ EllipticalFiber
-│  │  │  ├─ Matched_x_y.png
-│  │  │  ├─ Matched_x_z.png
-│  │  │  └─ Matched_y_z.png
+│  │  │  └─ Artificial_SEM
+│  │  │     ├─ Matched_x_y.png
+│  │  │     ├─ Matched_x_z.png
+│  │  │     └─ Matched_y_z.png
 │  │  ├─ MF-1
 │  │  │  ├─ CT
 │  │  │  │  ├─ Matched_x_y.png
@@ -28,10 +30,19 @@ FiltNet-for-rapidly-predicting-fibrous-filter-media-properties
 │  │  │  └─ SEM
 │  │  │     ├─ cross_section_cut.png
 │  │  │     └─ surface_cut.png
+│  │  ├─ NF-1
+│  │  │  ├─ Artifical_SEM
+│  │  │  │  ├─ Matched_x_y.png
+│  │  │  │  ├─ Matched_x_z.png
+│  │  │  │  └─ Matched_y_z.png
+│  │  │  └─ SEM
+│  │  │     ├─ cross_section.png
+│  │  │     └─ surface.png
 │  │  └─ OrientedFiber
-│  │     ├─ Matched_x_y.png
-│  │     ├─ Matched_x_z.png
-│  │     └─ Matched_y_z.png
+│  │     └─ Artificial_SEM
+│  │        ├─ Matched_x_y.png
+│  │        ├─ Matched_x_z.png
+│  │        └─ Matched_y_z.png
 │  └─ Predictions
 │     └─ showcase
 │        └─ results_40_10066d.txt
@@ -79,7 +90,12 @@ FiltNet-for-rapidly-predicting-fibrous-filter-media-properties
 2. **ImgDisplay.ipynb**: Notebook for displaying and visualizing images from the training dataset (FiltNet_1000d.h5).
 3. **RandomShowCase.ipynb**: Notebook for showcasing random prediction examples with detailed visualizations.
 4. **Model40FineTune_10066d.h5**: Pre-trained FiltNet model for prediction. Use this link to download: [model](https://1drv.ms/u/c/4790a4376137575d/EagLVo9ZYipKvPk3hqT0VCAB-XRfgUbIrv4lCOF6qdY01g?e=0qXpDF)
-5. **Imgs/**: Contains example SEM images of different fiber types (CurvedFiber, EllipticalFiber, OrientedFiber) and real filter media (MF-1) with matched projections in x-y, x-z, and y-z planes.
+5. **Imgs/**: Contains example images of different fiber types and filter media:
+   - **CurvedFiber/Artificial_SEM/**: Artificial SEM images with matched projections in x-y, x-z, and y-z planes
+   - **EllipticalFiber/Artificial_SEM/**: Artificial SEM images with matched projections in x-y, x-z, and y-z planes
+   - **OrientedFiber/Artificial_SEM/**: Artificial SEM images with matched projections in x-y, x-z, and y-z planes
+   - **MF-1/**: Real filter media with both CT and SEM images
+   - **NF-1/**: Filter media with both Artificial SEM and real SEM images
 6. **Predictions/showcase/**: Directory containing prediction results.
 
 ### 3.2 FiltNet_training

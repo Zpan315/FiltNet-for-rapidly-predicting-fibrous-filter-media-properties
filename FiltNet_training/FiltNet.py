@@ -627,10 +627,13 @@ def predict(model,A,B,ModelType=40):
         y[i] /= unit_transfer
 
     single_value_output = y[:14]
+    output = single_value_output.copy()
+    
     for i in range(len(data_indices) - 1):
-        output = np.append(single_value_output, y[np.sum(data_indices[:i + 1]):np.sum(data_indices[:i + 2])])
+        start = np.sum(data_indices[:i + 1])
+        end   = np.sum(data_indices[:i + 2])
+        output = np.append(output, y[start:end])
     return output
-
 
 #================================================================================================#
 #Prettify and Print Results
