@@ -2,7 +2,12 @@
 
 ## 1.Description
 
-**Deep Learning-driven SEM Image Analysis for Rapidly Predicting Structural Characteristics and Filtration Performance of Fibrous Filter Media**
+**Resolution-independent deep learning framework for predicting structure and filtration performance of anisotropic fibrous media from SEM images**
+
+The macroscopic performance of fibrous filter media featuring 3D anisotropic fiber networks is highly dependent on their internal micro- or nano-structure. Here, we report a deep learning workflow (FiltNet) driven by readily accessible SEM (or SEM-like) images that not only comprehensively characterizes the physical properties but also predicts ultrafine particle filtration performance of fibrous filter media with fiber diameters ranging from 50 nm to 20 μm, making the SEM a predictive tool rather than just imaging. A database including 40,264 semi-realistic SEM image sets captured from 3D high-fidelity virtual fibrous filters, along with corresponding structural properties and filtration performance data, was built and used to train the optimal CNN architecture. By incorporating the pixel size as metadata, FiltNet is compatible with images of flexible resolution. The prediction performance of FiltNet was validated to generalize to actual filter media. This FiltNet can be a powerful tool for accelerating the characterization and on-demand design of fibrous filter media, enabling prompt responses to diverse application requirements and emergency scenarios.
+
+
+![alt text](<Graphical abstract.jpg>)
 
 ## 2.File Structure
 ```
@@ -167,7 +172,9 @@ pip install -r requirements.txt
 If you find this repo useful, please cite our paper.
 
 ```
-[Citation to be added upon publication]
+Pan, Zhengyuan, Tianle You, Qisheng Ou, Francisco J. Romay, Shibo Wang, Yun Liang, and David YH Pui. "Resolution-independent deep learning framework for predicting structure and filtration performance of anisotropic fibrous media from SEM images." Separation and Purification Technology (2026): 137860.
+
+DOI: https://doi.org/10.1016/j.seppur.2026.137860
 ```
 
 
